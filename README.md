@@ -19,8 +19,7 @@ Create the Text using cv2.putText.
 
 Create the sturcturing element kernel via autogeneration for opening and closing using :
 ```Python
-cv2.getStructuringElement(cv2.MORPH_RECT,('''dimention of structuring
-element'''))
+cv2.getStructuringElement(cv2.MORPH_RECT,('''dimention of structuring element'''))
 ```
 
 ### Step4:
@@ -34,14 +33,10 @@ Display the result Image.
  
 ## Program:
 
-
-<font color = " #00cccc " >
-
+```
 Developed By: Pranave B
-
 Register  No: 212221240040
-
-</font>
+```
 
 ``` Python
 # Import the necessary packages
