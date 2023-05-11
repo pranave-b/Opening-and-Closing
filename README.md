@@ -19,7 +19,7 @@ Create the Text using cv2.putText.
 
 Create the sturcturing element kernel via autogeneration for opening and closing using :
 ```Python
-cv2.getStructuringElement(cv2.MORPH_RECT,('''dimention of structuring element'''))
+kernel = cv2.getStructuringElement(cv2.MORPH_CROSS, kernelsize)
 ```
 
 ### Step4:
