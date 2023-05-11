@@ -8,45 +8,70 @@ To implement Opening and Closing using Python and OpenCV.
 2. OpenCV
 ## Algorithm:
 ### Step1:
-<br>
 
+Import the necessary packages.
 
 ### Step2:
-<br>
+
+Create the Text using cv2.putText.
 
 ### Step3:
-<br>
+
+Create the sturcturing element kernel via autogeneration for opening and closing using :
+```Python
+cv2.getStructuringElement(cv2.MORPH_RECT,('''dimention of structuring
+element'''))
+```
 
 ### Step4:
-<br>
+
+Implement Opening and Closing over the image using cv2.morphologyEx().
 
 ### Step5:
-<br>
+
+Display the result Image.
 
  
 ## Program:
 
+
+<font color = " #00cccc " >
+
+Developed By: Pranave B
+
+Register  No: 212221240040
+
+</font>
+
 ``` Python
 # Import the necessary packages
 
-
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
 
 # Create the Text using cv2.putText
 
+text_image = np.zeros((100,250), dtype = 'uint8')
+font = cv2.FONT_HERSHEY_SCRIPT_SIMPLEX
+cv2.putText(text_image, 'Pranave',(5,70),font,2,255,2,cv2.LINE_AA)     
+plt.imshow(text_image,'bone')
+plt.axis('off')
 
 
 # Create the structuring element
 
-
+kernelsize = (8, 8)
+kernel = cv2.getStructuringElement(cv2.MORPH_CROSS, kernelsize)
 
 # Use Opening operation
 
-
+open_image = cv2.morphologyEx(image, cv2.MORPH_OPEN, kernel)
 
 
 # Use Closing Operation
 
-
+close_image = cv2.morphologyEx(image, cv2.MORPH_CLOSE, kernel)
 
 
 
@@ -54,28 +79,16 @@ To implement Opening and Closing using Python and OpenCV.
 ## Output:
 
 ### Display the input Image
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+![](input_image.png)
 
 ### Display the result of Opening
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+![](oi.png)
 
 ### Display the result of Closing
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+![](ci.png)
 
 ## Result
 Thus the Opening and Closing operation is used in the image using python and OpenCV.
